@@ -29,7 +29,7 @@ export class AutenticacaoService {
     public entrarComGoogle():firebase.Promise<FirebaseAuthState> {
         return this.firebaseAuthentication.login( {
             provider: AuthProviders.Google,
-            method: AuthMethods.Popup
+            method: AuthMethods.Redirect
         });
     }
     
