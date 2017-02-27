@@ -1,0 +1,22 @@
+<ion-menu [content]="content">
+	<ion-header>
+	  <ion-toolbar>
+	    <ion-title>Opções</ion-title>
+	  </ion-toolbar>
+	</ion-header>
+
+	<ion-content>
+		<ion-list>
+	    	<button ion-item *ngFor="let menu of menus" (click)="onGoToView( menu.view )">
+        		{{menu.title}}
+      		</button>
+	  	</ion-list>
+	  	
+		<button ion-button icon-right (click)="onSair()">
+  			Sair
+  			<ion-icon name="md-log-out"></ion-icon>
+		</button>
+	</ion-content>
+</ion-menu>
+
+<ion-nav #content [root]="rootPage" swipeBackEnabled="false"></ion-nav>

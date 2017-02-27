@@ -1,0 +1,20 @@
+<ion-content padding>
+	<ion-item>
+		<ion-input type="email" placeholder="Digite seu email" [(ngModel)]="usuario.email"></ion-input>
+    </ion-item>
+
+	<ion-item>
+		<ion-input type="password" placeholder="Entre com sua senha" [(ngModel)]="usuario.senha"></ion-input>
+	</ion-item>
+	
+	<button ion-button color="dark" full 
+		(click)="onEntrarComSenha()">
+		Entrar
+	</button>
+	
+	<button ion-button color="primary" full  
+		(click)="onEntrarComGoogle()">
+		Entrar com o Google
+	</button>
+	
+</ion-content>
